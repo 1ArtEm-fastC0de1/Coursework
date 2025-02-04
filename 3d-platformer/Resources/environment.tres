@@ -1,0 +1,40 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://dk76xdns12yu3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_iavo6"]
+sky_top_color = Color(0.641668, 0.304383, 0.569717, 1)
+sky_horizon_color = Color(0.746348, 0.653234, 0.743807, 1)
+sky_curve = 0.191184
+ground_bottom_color = Color(0.483582, 0.446497, 0.718343, 1)
+ground_horizon_color = Color(0.58774, 0.61528, 0.980106, 1)
+sun_angle_max = 110.0
+sun_curve = 0.0230839
+energy_multiplier = 2.47
+
+[sub_resource type="Sky" id="Sky_epypy"]
+sky_material = SubResource("ProceduralSkyMaterial_iavo6")
+process_mode = 1
+radiance_size = 6
+
+[resource]
+background_mode = 2
+background_energy_multiplier = 0.66
+sky = SubResource("Sky_epypy")
+ambient_light_color = Color(0.516288, 0.407464, 0.881588, 1)
+ambient_light_sky_contribution = 0.32
+ambient_light_energy = 2.01
+ssr_max_steps = 94
+ssr_fade_in = 5.32595
+ssr_fade_out = 1.68179
+ssr_depth_tolerance = 0.01
+ssao_enabled = true
+ssao_radius = 1.33
+ssao_intensity = 6.06
+ssao_power = 2.61166
+ssao_horizon = 0.01
+ssil_radius = 6.51
+ssil_intensity = 2.52
+glow_normalized = true
+glow_intensity = 0.2
+glow_strength = 0.9
+glow_bloom = 0.04
+glow_blend_mode = 0

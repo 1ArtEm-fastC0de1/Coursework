@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv5ol88ire0u2"]
+
+[ext_resource type="PackedScene" uid="uid://pmfwnlhpjepa" path="res://blocks_game_pirple.glb" id="1_4anb5"]
+
+[node name="blocks_game_pirple" instance=ExtResource("1_4anb5")]

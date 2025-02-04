@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmpoolnet13sj"]
+
+[ext_resource type="PackedScene" uid="uid://cmdadudk1dl1l" path="res://Assets/Models/character/robot.glb" id="1_47inu"]
+
+[node name="robot" instance=ExtResource("1_47inu")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/2/rotation = Quaternion(0, -0.0132582, 0, 0.999912)
+bones/5/rotation = Quaternion(0.0570663, 0.0771264, 0.52809, 0.843751)
+bones/7/rotation = Quaternion(1.2767e-08, 1.58872e-08, 0.0275257, 0.999621)
+bones/11/rotation = Quaternion(-0.0607154, 0.103526, -0.447927, 0.885978)
+bones/13/rotation = Quaternion(-2.42743e-08, -1.55136e-08, 0.217259, 0.976114)
+
+[node name="AnimationPlayer" parent="." index="1"]
+speed_scale = 4.0
