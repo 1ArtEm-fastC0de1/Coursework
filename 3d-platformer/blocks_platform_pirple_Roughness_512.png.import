@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh5a172fhlhil"
-path="res://.godot/imported/blocks_game_pirple_Roughness_512.png-0c92505ff3d5fdb59a4ad7c4e366d2bc.ctex"
+uid="uid://d36o4bpooa5sl"
+path="res://.godot/imported/blocks_platform_pirple_Roughness_512.png-713db6c023b7048f93bfc1f4fd3327ff.ctex"
 metadata={
 "vram_texture": false
 }
@@ -13,8 +13,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://blocks_game_pirple_Roughness_512.png"
-dest_files=["res://.godot/imported/blocks_game_pirple_Roughness_512.png-0c92505ff3d5fdb59a4ad7c4e366d2bc.ctex"]
+source_file="res://blocks_platform_pirple_Roughness_512.png"
+dest_files=["res://.godot/imported/blocks_platform_pirple_Roughness_512.png-713db6c023b7048f93bfc1f4fd3327ff.ctex"]
 
 [params]
 

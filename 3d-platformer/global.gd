@@ -2,4 +2,4 @@ extends Node
 
 
 var coins_count := 0
-const MAX_NUM_COIN = 7
+const MAX_NUM_COIN = 9

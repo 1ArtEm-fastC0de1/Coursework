@@ -1,17 +1,16 @@
 extends CharacterBody3D
 
-const SPEED = 4
+const SPEED = 5
 const JUMP_VELOCITY = 8
 const CAMERA_SPEED = 5.0
-const MOUSE_SENSITIVITY = 0.005  # Чувствительность мыши для поворота камеры
+const MOUSE_SENSITIVITY = 0.005  
 
-var camera_rotation_x = 0.0  # Угол поворота камеры по оси X (вверх/вниз)
-var camera_rotation_y = 0.0  # Угол поворота камеры по оси Y (влево/вправ)
+var camera_rotation_x = 0.0  
+var camera_rotation_y = 0.0  
 
 var xform : Transform3D
 
 func _ready():
-	# Отключаем захват курсора, чтобы он не выходил за пределы экрана
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta: float) -> void:
@@ -50,24 +49,22 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	# smooth zoom camera
 	$CameraController.position = lerp($CameraController.position, position, CAMERA_SPEED * delta)
 
-	# Update the camera's rotation based on the mouse movement
+	
 	_handle_mouse_look(delta)
 
 func _handle_mouse_look(delta: float) -> void:
-	var mouse_motion = Input.get_last_mouse_velocity()# Получаем движение мыши
+	var mouse_motion = Input.get_last_mouse_velocity()
 
-	if mouse_motion is Vector2:  # Проверяем, что mouse_motion действительно является вектором
+	if mouse_motion is Vector2:
 		var mouse_delta_x = mouse_motion.x * MOUSE_SENSITIVITY
 		var mouse_delta_y = mouse_motion.y * MOUSE_SENSITIVITY
 
-		# Обновляем углы поворота камеры
-		camera_rotation_y -= mouse_delta_x  # Поворот по оси Y (влево/вправ)
-		camera_rotation_x = clamp(camera_rotation_x - mouse_delta_y, -25, 25)  # Поворот по оси X (вверх/вниз), ограничиваем между -90 и 90 градусами
 
-		# Применяем повороты камеры
+		camera_rotation_y -= mouse_delta_x 
+		camera_rotation_x = clamp(camera_rotation_x - mouse_delta_y, -25, 25) 
+
 		$CameraController.rotation_degrees = Vector3(camera_rotation_x, camera_rotation_y, 0)
 
 func align_floor(floor_normal):

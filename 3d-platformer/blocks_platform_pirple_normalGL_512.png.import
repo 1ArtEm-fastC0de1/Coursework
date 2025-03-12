@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clg508opbmbcw"
-path.s3tc="res://.godot/imported/blocks_pirple_normalGL_512.png-b43c86212df40809c91f4b4dd2e7df9b.s3tc.ctex"
+uid="uid://dt17psfe2pha3"
+path.s3tc="res://.godot/imported/blocks_platform_pirple_normalGL_512.png-2391dfa1e0fe7d4c57e3966caf478cf8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/Models/blocks_pirple_normalGL_512.png"
-dest_files=["res://.godot/imported/blocks_pirple_normalGL_512.png-b43c86212df40809c91f4b4dd2e7df9b.s3tc.ctex"]
+source_file="res://blocks_platform_pirple_normalGL_512.png"
+dest_files=["res://.godot/imported/blocks_platform_pirple_normalGL_512.png-2391dfa1e0fe7d4c57e3966caf478cf8.s3tc.ctex"]
 
 [params]
 
@@ -28,7 +28,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://Assets/Models/blocks_pirple_normalGL_512.png"
+roughness/src_normal="res://blocks_platform_pirple_normalGL_512.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

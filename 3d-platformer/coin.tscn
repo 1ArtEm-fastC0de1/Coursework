@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2334ti21lybp"]
+[gd_scene load_steps=7 format=3 uid="uid://bexhejf4expne"]
 
 [ext_resource type="Script" path="res://coin.gd" id="1_mp5fy"]
 [ext_resource type="ArrayMesh" uid="uid://dcmys50mapie7" path="res://Assets/Models/coin_new.res" id="2_jie3s"]
