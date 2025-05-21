@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc5xpke5doxww"]
+
+[ext_resource type="ArrayMesh" uid="uid://dss5r5ihhn78h" path="res://Assets/Models/thorn_new.res" id="1_esynb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ldpw1"]
+size = Vector3(0.731323, 0.897034, 0.775635)
+
+[node name="Thorn" type="Area3D"]
+collision_layer = 32
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, 0)
+mesh = ExtResource("1_esynb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0010376, 0.45108, -0.0238037)
+shape = SubResource("BoxShape3D_ldpw1")

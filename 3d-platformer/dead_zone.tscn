@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfngyrnbxhhi3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b3lw8"]
+size = Vector3(1.43213, 8.10889, 1.38757)
+
+[node name="DeadZone" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.9941, 0)
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(77.0871, 0, 0, 0, 1.40066, 0, 0, 0, 83.8541, -16.6551, -1.9771, 4.58807)
+shape = SubResource("BoxShape3D_b3lw8")

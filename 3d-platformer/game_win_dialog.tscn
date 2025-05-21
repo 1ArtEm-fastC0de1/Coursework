@@ -1,0 +1,172 @@
+[gd_scene load_steps=11 format=3 uid="uid://bpm1qd0jcnjme"]
+
+[ext_resource type="Texture2D" uid="uid://d34wgh1kxnitp" path="res://Resources/менюшка.png" id="1_klv4v"]
+[ext_resource type="Script" path="res://game_win_dialog.gd" id="1_ltjv5"]
+[ext_resource type="FontFile" uid="uid://di8ov7g74y6eg" path="res://Resources/Batboy-3lX6M.otf" id="2_hl5v2"]
+[ext_resource type="AudioStream" uid="uid://dgg4wsb72dy0u" path="res://Assets/Sounds/game-win-sound.mp3" id="3_fhkff"]
+[ext_resource type="PackedScene" uid="uid://8co87m24t5tn" path="res://TransitionsScene/fade_transition.tscn" id="5_o4bmb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6gjr"]
+texture = ExtResource("1_klv4v")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y5l0n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0oxs"]
+bg_color = Color(0.164949, 0.837231, 0.978869, 1)
+skew = Vector2(0.03, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(6.54578e-06, 0.735396, 0.978748, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(1.54018e-06, 0.558432, 0.784637, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(3.7, 2.825)
+anti_aliasing_size = 0.541
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2s4x"]
+bg_color = Color(0.173527, 0.863427, 0.987778, 1)
+skew = Vector2(0.03, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(6.54578e-06, 0.735396, 0.978748, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(1.54018e-06, 0.558432, 0.784637, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(3.7, 2.825)
+anti_aliasing_size = 0.541
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cuxkl"]
+bg_color = Color(0, 0.912215, 0.923638, 1)
+draw_center = false
+skew = Vector2(0.03, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(6.54578e-06, 0.735396, 0.978748, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(1.54018e-06, 0.558432, 0.784637, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(3.7, 2.825)
+anti_aliasing_size = 0.541
+
+[node name="GameWinDialog" type="CanvasLayer"]
+script = ExtResource("1_ltjv5")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0.544974, 0.544974, 0.544974, 1)
+self_modulate = Color(0.791999, 0.791999, 0.791999, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -608.0
+offset_top = -926.0
+offset_right = 1090.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_x6gjr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.5
+offset_top = -158.035
+offset_right = 208.5
+offset_bottom = 140.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.44
+theme_override_colors/font_shadow_color = Color(0.307939, 0.607383, 0.901272, 1)
+theme_override_colors/font_outline_color = Color(0.121273, 0, 0.931914, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_hl5v2")
+theme_override_font_sizes/font_size = 79
+text = "LEVEL COMPLETE"
+horizontal_alignment = 1
+
+[node name="NextLevel" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_hl5v2")
+theme_override_font_sizes/font_size = 59
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y5l0n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c0oxs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e2s4x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cuxkl")
+text = "NEXT LEVEL"
+
+[node name="Restart" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_hl5v2")
+theme_override_font_sizes/font_size = 59
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y5l0n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c0oxs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e2s4x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cuxkl")
+text = "RESTART"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_hl5v2")
+theme_override_font_sizes/font_size = 59
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y5l0n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c0oxs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e2s4x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cuxkl")
+text = "EXIT"
+
+[node name="GameWinSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fhkff")
+volume_db = -52.243
+
+[node name="FadeTransition" parent="." instance=ExtResource("5_o4bmb")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="fade_timer" type="Timer" parent="FadeTransition"]
+wait_time = 0.292
+
+[connection signal="pressed" from="VBoxContainer/NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

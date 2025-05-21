@@ -10,14 +10,20 @@ config_version=5
 
 [application]
 
-config/name="3d Platformer"
-run/main_scene="res://level_1.tscn"
+config/name="Jump Dash"
+config/version="1.0"
+run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Resources/иконка.png"
+config/windows_native_icon="res://Resources/icon.ico"
 
 [autoload]
 
 Global="*res://global.gd"
+
+[display]
+
+window/vsync/vsync_mode=0
 
 [importer_defaults]
 
@@ -44,6 +50,9 @@ scene={
 "nodes/root_type": "",
 "skins/use_named_skins": true
 }
+animation_library={
+"animation/fps": 60.0
+}
 
 [input]
 
@@ -67,6 +76,11 @@ move_down={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
 ]
 }
+esc={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
@@ -75,6 +89,7 @@ move_down={
 3d_physics/layer_3="item"
 3d_physics/layer_4="enemy"
 3d_physics/layer_5="deadzone"
+3d_physics/layer_6="thorn"
 
 [physics]
 
@@ -83,3 +98,4 @@ move_down={
 [rendering]
 
 anti_aliasing/quality/msaa_3d=1
+anti_aliasing/image=""

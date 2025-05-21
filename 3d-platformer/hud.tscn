@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=3 uid="uid://rf5fgmhvrn2c"]
+
+[ext_resource type="Script" path="res://hud.gd" id="1_6x4rf"]
+[ext_resource type="Texture2D" uid="uid://bq02dftsxv3f0" path="res://Resources/money.png" id="1_7gs6y"]
+[ext_resource type="FontFile" uid="uid://di8ov7g74y6eg" path="res://Resources/Batboy-3lX6M.otf" id="2_56ud4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8qrd"]
+bg_color = Color(0.0962047, 0.0962048, 0.0962047, 0.67451)
+skew = Vector2(0.07, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.39248, 0.350776, 0.0960736, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.444378, 0.32014, 0.049103, 0.529412)
+shadow_size = 4
+shadow_offset = Vector2(1.075, 1.425)
+anti_aliasing_size = 2.881
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwyat"]
+bg_color = Color(0.0962047, 0.0962048, 0.0962047, 0.67451)
+skew = Vector2(-0.07, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.39248, 0.350776, 0.0960736, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.444378, 0.32014, 0.049103, 0.529412)
+shadow_size = 4
+shadow_offset = Vector2(1.075, 1.425)
+anti_aliasing_size = 2.881
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_6x4rf")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 25.0
+offset_top = 17.0
+offset_right = 204.0
+offset_bottom = 89.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_r8qrd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 10.0
+offset_top = 26.0
+offset_right = 103.0
+offset_bottom = 96.0
+rotation = -0.19981
+texture = ExtResource("1_7gs6y")
+expand_mode = 1
+flip_h = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 90.0
+offset_top = 28.0
+offset_right = 121.0
+offset_bottom = 85.0
+rotation = -0.0297447
+theme_override_colors/font_color = Color(0.761822, 0.62471, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("2_56ud4")
+theme_override_font_sizes/font_size = 44
+text = "X"
+
+[node name="CoinsLabel" type="Label" parent="."]
+offset_left = 125.0
+offset_top = 19.0
+offset_right = 188.0
+offset_bottom = 87.0
+rotation = -0.0150592
+theme_override_colors/font_color = Color(0.761822, 0.62471, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("2_56ud4")
+theme_override_font_sizes/font_size = 61
+text = "0"
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -184.0
+offset_top = 17.0
+offset_right = -28.0
+offset_bottom = 89.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xwyat")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="TimerLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -147.0
+offset_top = 18.0
+offset_right = -45.0
+offset_bottom = 78.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.761822, 0.62471, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("2_56ud4")
+theme_override_font_sizes/font_size = 44
+text = "00:00"

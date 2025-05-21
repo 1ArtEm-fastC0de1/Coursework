@@ -1,0 +1,226 @@
+[gd_scene load_steps=13 format=3 uid="uid://dj36v23wl0brt"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_365rh"]
+[ext_resource type="Shader" path="res://pause_menu.gdshader" id="2_4t40o"]
+[ext_resource type="FontFile" uid="uid://di8ov7g74y6eg" path="res://Resources/Batboy-3lX6M.otf" id="3_1tavq"]
+
+[sub_resource type="Animation" id="Animation_pdsa7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nn58c"]
+resource_name = "blur"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.81]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xukmb"]
+_data = {
+"RESET": SubResource("Animation_pdsa7"),
+"blur": SubResource("Animation_nn58c")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5tqb"]
+shader = ExtResource("2_4t40o")
+shader_parameter/lod = 0.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7urlb"]
+content_margin_top = 25.0
+content_margin_bottom = 25.0
+bg_color = Color(0.886725, 0.827901, 3.85046e-07, 1)
+skew = Vector2(0.05, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.172457, 0.894663, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+shadow_color = Color(0.211209, 0.765944, 0.948488, 0.6)
+shadow_size = 15
+anti_aliasing_size = 2.528
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slu86"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onc3d"]
+bg_color = Color(0.164949, 0.837231, 0.978869, 1)
+skew = Vector2(0.05, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(6.54578e-06, 0.735396, 0.978748, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(1.54018e-06, 0.558432, 0.784637, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(3.7, 2.825)
+anti_aliasing_size = 0.541
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2orm"]
+bg_color = Color(0.173527, 0.863427, 0.987778, 1)
+skew = Vector2(0.05, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(6.54578e-06, 0.735396, 0.978748, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(1.54018e-06, 0.558432, 0.784637, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(3.7, 2.825)
+anti_aliasing_size = 0.541
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n46iv"]
+bg_color = Color(0, 0.912215, 0.923638, 1)
+skew = Vector2(0.05, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(6.54578e-06, 0.735396, 0.978748, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(1.54018e-06, 0.558432, 0.784637, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(3.7, 2.825)
+anti_aliasing_size = 0.541
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_365rh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xukmb")
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_c5tqb")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.5
+offset_top = -198.0
+offset_right = 187.5
+offset_bottom = 198.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7urlb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/separation = -125
+
+[node name="Restart" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_1tavq")
+theme_override_font_sizes/font_size = 69
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slu86")
+theme_override_styles/hover = SubResource("StyleBoxFlat_onc3d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i2orm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_n46iv")
+text = "RESTART"
+
+[node name="Exit" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_1tavq")
+theme_override_font_sizes/font_size = 69
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slu86")
+theme_override_styles/hover = SubResource("StyleBoxFlat_onc3d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i2orm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_n46iv")
+text = "EXIT"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
