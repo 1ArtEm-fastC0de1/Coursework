@@ -3,6 +3,9 @@ extends CanvasLayer
 func _ready() -> void:
 	$GameOverSound.play()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
+	$CoinLabel.text = "Coins collected: %d" % Global.coins_count
+	$TimeLabel.text = "Remaining time: %.2f" % Global.time_left
 
 func _on_restart_pressed() -> void:
 	if Global.current_level_path != "":

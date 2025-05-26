@@ -2,6 +2,8 @@ extends CanvasLayer
 
 
 func _ready() -> void:
+	$CoinLabel.text = "Coins collected: %d" % Global.coins_count
+	$TimeLabel.text = "Remaining time: %.2f" % Global.time_left
 	$GameWinSound.play()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 

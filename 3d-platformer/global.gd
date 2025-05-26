@@ -3,6 +3,7 @@ extends Node
 var current_level_path: String = ""
 var coins_count := 0
 var max_num_coin := 0
+var time_left := 0.0
 var level_index := 0
 var level_paths := [
 	"res://level_1.tscn",

@@ -155,7 +155,7 @@ text = "EXIT"
 
 [node name="GameWinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_fhkff")
-volume_db = -52.243
+volume_db = -21.324
 
 [node name="FadeTransition" parent="." instance=ExtResource("5_o4bmb")]
 anchors_preset = 0
@@ -166,6 +166,52 @@ grow_vertical = 1
 
 [node name="fade_timer" type="Timer" parent="FadeTransition"]
 wait_time = 0.292
+
+[node name="CoinLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -281.0
+offset_top = 176.0
+offset_right = -49.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.44
+theme_override_colors/font_shadow_color = Color(0.307939, 0.607383, 0.901272, 1)
+theme_override_colors/font_outline_color = Color(0.121273, 0, 0.931914, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 19
+
+[node name="TimeLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 88.0
+offset_top = 176.0
+offset_right = 320.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.44
+theme_override_colors/font_shadow_color = Color(0.307939, 0.607383, 0.901272, 1)
+theme_override_colors/font_outline_color = Color(0.121273, 0, 0.931914, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 19
 
 [connection signal="pressed" from="VBoxContainer/NextLevel" to="." method="_on_next_level_pressed"]
 [connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]

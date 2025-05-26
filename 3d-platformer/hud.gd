@@ -15,9 +15,9 @@ func _ready() -> void:
 	update_timer_display()
 
 func _on_timer_timeout() -> void:
-	time_left -= timer.wait_time
+	time_left = max(time_left - timer.wait_time, 0)
+	Global.time_left = time_left
 	if time_left <= 0:
-		time_left = 0
 		timer.stop()
 		get_tree().change_scene_to_file("res://game_over_dialog.tscn")
 	update_timer_display()

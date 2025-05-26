@@ -88,7 +88,7 @@ libraries = {
 
 [node name="GetCoinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jpxpb")
-volume_db = -40.087
+volume_db = -10.081
 pitch_scale = 1.24
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
