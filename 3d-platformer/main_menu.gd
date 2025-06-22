@@ -11,7 +11,7 @@ func _on_exit_pressed() -> void:
 	get_tree().quit()
 func _on_fade_timer_timeout() -> void:
 	if button_type == "start":
-		get_tree().change_scene_to_file("res://level_1.tscn")
+		get_tree().change_scene_to_file("res://select_level.tscn")
 func _on_fullscreen_button_pressed() -> void:
 	is_fullscreen = !is_fullscreen
 	if is_fullscreen:
