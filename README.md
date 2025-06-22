@@ -19,10 +19,14 @@
 Використано такі бібліотеки, як Godot.CharacterBody3D, Godot.Area3D, Godot.Node, Godot.Node3D, Godot.Control. Також всі моделі розроблені у Blender.
 
 # Для запуску гри:
-* скачайте архів;
+* скачайте архів "Jump.Dash.zip", який знаходиться у вкладці "Releases";
+  ![Снимок экрана 2025-05-26 193639](https://github.com/user-attachments/assets/c4f36ff0-401c-4827-9b0b-32d66d89afe9)
 * розпакуйте у зручне для вас місце;
 * перейдіть у папку "3d-platformer";
 * відкрийте файл "Jump Dash.exe".
+
+  ![Снимок экрана 2025-05-26 194427](https://github.com/user-attachments/assets/3e6e09b2-3e1c-4f56-802d-bf6814530265)
+
 
 
 # Виконавець
